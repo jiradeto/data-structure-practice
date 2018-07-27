@@ -5,14 +5,16 @@ class Main
   end
 
   def self.insertion_sort(arr)
-     (0).upto((arr.length - 2) ).each do |i|
-        min_index = i
-        (i+1).upto((arr.length - 1)).each do |j|
-          min_index = j if arr[j] < arr[min_index]
-        end
-        arr[i], arr[min_index] = arr[min_index], arr[i] if arr[min_index] != i
-     end
-     arr
+    (1).upto((arr.length-1)).each do |i|
+      key = arr[i]
+      j = i - 1
+      while (j>=0 && key < arr[j])
+        arr[j+1] = arr[j]
+        j = j - 1
+      end
+      arr[j+1] = key
+    end
+    arr
   end
 end
 
