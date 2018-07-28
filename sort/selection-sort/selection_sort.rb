@@ -1,6 +1,6 @@
 class Main
   def self.run
-    arr = [93,2,47,1,902]
+    arr = [93, 2, 47, 1, 902]
     puts selection_sort(arr)
   end
 
